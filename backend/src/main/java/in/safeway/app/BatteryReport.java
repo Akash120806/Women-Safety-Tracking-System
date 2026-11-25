@@ -1,0 +1,2 @@
+package in.safeway.app;
+import javax.persistence.*;import java.time.LocalDateTime; @Entity @Table(name="battery_reports") public class BatteryReport{@Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id;@ManyToOne(optional=false) @JoinColumn(name="user_id") public User user;public Integer level;public Boolean charging;public LocalDateTime reportedAt;public BatteryReport(){}public BatteryReport(User u,Integer l,Boolean c){user=u;level=l;charging=c;reportedAt=LocalDateTime.now();}}

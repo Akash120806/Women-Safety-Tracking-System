@@ -1,0 +1,3 @@
+package in.safeway.app;
+import javax.persistence.*;import java.time.LocalDateTime;
+@Entity @Table(name="safe_journeys") public class Journey { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; @ManyToOne(optional=false) @JoinColumn(name="user_id") public User user; @Column(nullable=false) public String destination; public LocalDateTime expectedArrival; public LocalDateTime createdAt; public LocalDateTime updatedAt; public String status; public String lastCheckIn; public Journey(){} public Journey(User u,String d,LocalDateTime a){user=u;destination=d;expectedArrival=a;createdAt=LocalDateTime.now();updatedAt=createdAt;status="ACTIVE";} }

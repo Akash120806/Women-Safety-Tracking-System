@@ -1,0 +1,2 @@
+package in.safeway.app;
+import org.springframework.data.jpa.repository.JpaRepository;import java.util.List;public interface NotificationRepository extends JpaRepository<SafetyNotification,Long>{List<SafetyNotification> findByRecipientIdOrderByCreatedAtDesc(Long id);}

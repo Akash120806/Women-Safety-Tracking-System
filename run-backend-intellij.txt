@@ -1,0 +1,9 @@
+1. Open the backend folder in IntelliJ (the folder containing pom.xml).
+2. Use JDK 8 as Project SDK and Maven Runner JRE.
+3. Maven home: Bundled (Maven 3); Work offline: unchecked.
+4. Edit src/main/resources/application.properties and set spring.datasource.password.
+5. Reload Maven projects.
+6. Run in.safeway.app.SafetyApplication.
+7. Backend: http://localhost:8080
+
+If dependencies remain unresolved, open the Build tool window and copy the full Maven error output.
